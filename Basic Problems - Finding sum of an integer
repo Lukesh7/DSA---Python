@@ -1,0 +1,12 @@
+#finding sum of an integer
+
+def findsum(n):
+    #creating an empty variable to store
+    total = 0
+    for i in range (1,n+1):
+        total += i #total = total + i
+    return total
+        
+n= int (input("Enter a number : "))
+result = findsum(n)
+print(result)
