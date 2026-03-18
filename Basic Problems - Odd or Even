@@ -1,0 +1,12 @@
+#define a function
+def checkEven():
+    
+    #if a number's reminder is 0 after divided by 2 then its a Even
+    if n % 2 ==0:
+        return "Even"
+        
+    else:
+        return "Odd"
+n = int(input("Enter a number : "))
+result = checkEven()
+print(result)
