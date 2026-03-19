@@ -1,0 +1,21 @@
+#to find closest number divisible by m
+n = 13
+m = 4
+
+def Closest_Num(n, m):    
+    rem = n % m #reminder = 1
+    
+    lower = n - rem # 13 - 1 = 12
+    higher = n + (m - rem) #13 +(4-1) = 16
+    
+    #if abs(13-12=1) < abs(13- 16 = 3)
+    if abs(n - lower) < abs(n - higher):
+        return lower
+    #if abs(1) > abs(3)
+    elif abs(n - lower) < abs(n - higher):
+        return higher
+    else:
+         return max(n,m) #if tie -> max absolute value 
+         
+print(Closest_Num(n,m))
+    
