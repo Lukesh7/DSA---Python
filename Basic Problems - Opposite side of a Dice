@@ -1,0 +1,5 @@
+#to print opposite side of a Dice
+def oppDice(num):
+    ans = 7 - num
+    return ans
+print(oppDice(5))
