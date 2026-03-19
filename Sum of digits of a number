@@ -1,0 +1,7 @@
+#finding sum of digits
+num = 644
+tot = 0
+
+for digit in str(num):
+        tot += int(digit)
+print(tot)
