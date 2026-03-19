@@ -1,0 +1,10 @@
+#a and b inputs
+a = 10
+b = 20
+print ("a=", a, "b=", b)
+
+#swapping with an temporary variable
+temp = a
+a = b
+b = temp
+print ("a=", a, "b=", b)
