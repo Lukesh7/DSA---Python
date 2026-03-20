@@ -1,0 +1,13 @@
+#Multi Dimensional zero matrix
+m,n = 4,5
+mat = []
+#outer loop
+for i in range (m):
+    #inner loop
+    row=[]
+    for j in range (n):
+        row.append(0)
+        
+    mat.append(row)
+    
+print(mat)
