@@ -79,3 +79,9 @@ print("_".join([s]*2))
 s1 = "Hello"
 s2 = "World"
 print( s1 + " " + s2)
+
+#string membership testing
+#to check the string is present or not by returning bool
+
+s = "Hello World"
+print("Hello" in s) #True
