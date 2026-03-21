@@ -1,11 +1,16 @@
-#string
-# f - string
+#string in python 
+#formatting
+#by f - string
 n = 5
 print(f"The cube of {n} is {n*n*n}")
 
 name = "Lukesh"
 fav = "Coffee"
 print(f"{name} likes to drink {fav}")
+
+#by format()
+s = "My name is {} , I love {}".format("Lukesh","Cars")
+print(s)
 
 #slicing 
 s = "hello"
@@ -69,3 +74,8 @@ print("_".join(s*2)) #P_y_t_h_o_n_P_y_t_h_o_n
 
 print("_".join([s]*2))
 #Python_Python
+
+#concatenate strings
+s1 = "Hello"
+s2 = "World"
+print( s1 + " " + s2)
