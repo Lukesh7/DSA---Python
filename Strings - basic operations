@@ -1,0 +1,71 @@
+#string
+# f - string
+n = 5
+print(f"The cube of {n} is {n*n*n}")
+
+name = "Lukesh"
+fav = "Coffee"
+print(f"{name} likes to drink {fav}")
+
+#slicing 
+s = "hello"
+print( s[1:4] ) #ell
+print( s[:4] ) #hell
+
+#reversing 
+print( s[::-1])
+
+#deleting
+del s  #permenently deleted
+
+#new string created 
+#length of a string
+
+s = "hello world"
+print("length of s :",len(s))
+
+# lower case & upper case
+print(s.lower())
+print(s.upper())
+    
+#updating a char and word
+s1 = "H" + s[1:]
+print(s1)
+
+#replace()
+s2 = s.replace("hello","Hi")
+print(s2)
+
+del s
+
+s = "##hello world##"
+print("Before strip:",s)
+print("After stripped :",s.strip("#"))
+
+del s
+
+# Iteration on string
+s = "Python"
+
+# for loop
+for ch in s:
+    print(ch)
+    
+# while loop
+
+#using i (indexing)
+i = 0 #start index
+
+while i  < (len(s)): #stop condition
+    print( s[i] )    
+    i += 1 #moves forward
+
+# to repeat string
+print( s*3 ) #PythonPythonPython
+
+#to seperate them with "_"
+
+print("_".join(s*2)) #P_y_t_h_o_n_P_y_t_h_o_n
+
+print("_".join([s]*2))
+#Python_Python
