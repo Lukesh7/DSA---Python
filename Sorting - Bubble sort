@@ -1,0 +1,17 @@
+#bubble sort
+
+def bubble_sort(arr):
+    n = len(arr)
+    
+    for i in range(n): #outer loop
+    
+        for j in range(0, n-i-1): #inner loop
+            if arr[j] > arr[j+1]: #compare
+                #swap
+                arr[j], arr[j+1] = arr[j+1], arr[j] 
+    
+    return arr
+
+#arr
+nums = [5,7,3,9,2]
+print(bubble_sort(nums))
