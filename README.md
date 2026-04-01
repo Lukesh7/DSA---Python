@@ -1,9 +1,9 @@
 📚 Data Structures & Algorithms (DSA) Practice
 
-"Python" (https://img.shields.io/badge/Python-3.x-blue?logo=python)
-"Status" (https://img.shields.io/badge/Status-Active-brightgreen)
-"Focus" (https://img.shields.io/badge/Focus-DSA-orange)
-"Level" (https://img.shields.io/badge/Level-Beginner--to--Intermediate-yellow)
+![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python)
+![Status](https://img.shields.io/badge/Status-Active-brightgreen)
+![Focus](https://img.shields.io/badge/Focus-DSA-orange)
+![Level](https://img.shields.io/badge/Level-Beginner--to--Intermediate-yellow)
 
 ---
 
