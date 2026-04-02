@@ -1,0 +1,41 @@
+#hash map
+
+#creating hash table
+
+def create_hash_table(arr):
+    
+    hash_table = {} #stores as dict for key value pairs
+    
+    for i in range(len(arr)): #for all element
+        # key = element , value = index
+        hash_table[arr[i]]= i 
+        
+    return hash_table
+
+#for searching an element                
+
+def search_hash_table(arr, target):
+    
+    if target in hash_table: #checks
+        return hash_table[target] #if found
+    
+    return -1  #if not found
+    
+ 
+
+arr = [10,20,30,40,50]
+
+#converts list to hash table
+hash_table = create_hash_table(arr)
+
+target = 20
+
+result = search_hash_table(hash_table,target)
+
+#output
+if result != -1: #if found
+    print(f"The Element is found at the index of {result}")
+    
+else: #if not found
+    print("Element is not found")
+    
