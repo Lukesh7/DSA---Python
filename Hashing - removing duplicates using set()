@@ -1,0 +1,19 @@
+#removing duplicates using hash
+
+def remove_duplicates(arr):
+   seen = set() #set() - automatically avoids duplicates
+   result = [] #to store O/p
+   
+   for num in arr:
+       #to check the num already in seen
+       if num not in seen:
+           
+           seen.add(num) #adds nums to set()
+           result.append(num) #adds nums to result[]
+   
+   return result
+   
+
+arr = [1,2,2,3,4,4]            
+print(remove_duplicates(arr))
+        
