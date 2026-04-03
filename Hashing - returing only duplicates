@@ -1,0 +1,18 @@
+#Returning only duplicates using hash
+
+def return_duplicates(arr):
+   seen = set() #stores unique elements
+   duplicates = [] #to store dups
+   
+   for num in arr: 
+       
+       if num in seen: #if a num already in seen
+           if num not in duplicates: #ensures dup num is added only ones to duplicates[]
+               duplicates.append(num)
+       else:
+            seen.add(num) #1st time seeing the num so adds num to seen
+   
+   return duplicates
+ 
+arr = [1,2,2,2,3,4,4]            
+print(return_duplicates(arr))
