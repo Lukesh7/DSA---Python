@@ -1,0 +1,16 @@
+#Removing duplicates using Two Pointers
+
+arr = [1,1,2,2,3,4,4]
+
+def remove_duplicates(arr):
+    i = 0 #pointer on 1st element
+    
+    for j in range(1, len(arr)): #j traverses other elements
+    
+        if arr[i] != arr[j]: #if i not equals to j
+            i += 1 #pointer moves forward
+            arr[i] = arr[j] #now j updated as unique element
+    
+    return arr[ :i+1] #only unique elements
+     
+print(remove_duplicates(arr))
