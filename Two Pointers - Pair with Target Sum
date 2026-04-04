@@ -1,0 +1,22 @@
+#Find if two numbers sum to 10 using Two pointers
+
+arr = [1,2,3,7,8]
+target = 10
+
+def TwoPointer_sum(arr, target):
+    left = 0 #idx from l to r
+    right = len(arr) -1 #idx from r to l
+    
+    while left < right: #arr must be sorted
+        s = arr[left] + arr[right] #sum
+        
+        if s == target:
+            return True
+        elif s < target:
+            left +=1 # need bigger sum
+        else:
+            right -=1 # need smaller sum
+            
+    return false
+    
+print(TwoPointer_sum(arr,target))
