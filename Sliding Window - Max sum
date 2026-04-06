@@ -1,0 +1,19 @@
+#finding max sum of window
+
+arr = [2,3,5,2,7]
+k= 3  #size of the window
+
+def max_sum(arr, k):
+    window_sum = len(arr[:k])
+    max_sum = window_sum
+    
+    for i in range(k, len(arr)):
+        window_sum += arr[i]
+        window_sum -= arr[i - k]
+        
+        max_sum = max(max_sum, window_sum)
+    return max_sum
+    
+print(max_sum(arr, 3))
+            
+    
