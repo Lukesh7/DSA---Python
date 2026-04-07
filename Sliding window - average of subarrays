@@ -1,0 +1,19 @@
+#finding all averages of subarrays using sliding window
+
+arr = [1,3,2,5,4]
+k = 2 #window size
+
+def avg_sub(arr, k):
+    window_sum = sum(arr[ :k]) #sum of 1st window
+    result = [window_sum / k] #avg of 1st window
+    
+    for i in range(k, len(arr)):
+        
+        window_sum += arr[i] #adds new element 
+        window_sum -= arr[i-k] #removes old element
+        
+        result.append(window_sum / k)
+    
+    return result
+    
+print(avg_sub(arr,k))
