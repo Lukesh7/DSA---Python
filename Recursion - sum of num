@@ -1,0 +1,13 @@
+# Recursion 
+
+n = 5
+
+def sum_of_n(n):
+      #base case (when to stop)
+    if (n==1):
+        return 1
+        
+     #recursive case
+    return n + sum_of_n(n-1)
+    
+print(sum_of_n(n))
