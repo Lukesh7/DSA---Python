@@ -1,0 +1,10 @@
+#Fibonacci - Recursion code
+
+def fib(n):
+    
+    if n <= 1: #if n is less than 1
+        return n #return n because it won't have previous n's'
+        
+    return fib(n-1) + fib(n-2) #
+    
+print(fib(7))
