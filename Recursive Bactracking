@@ -1,0 +1,18 @@
+#subsets by backtracking
+
+def subsets(nums):
+    result = [] #to store 
+    
+    def backtrack(start, path): #start(to explore) , current
+        result.append(path[:]) #to copy the combination of paths
+        
+        for i in range(start, len(nums)): #to explore remaining elements
+            path.append(nums[i]) #chooses elements 
+            backtrack(i + 1, path) #only next elements to explore
+            path.pop() #to backtrack (undo)
+            
+    backtrack(0, []) #from index 0 , empty
+    return result
+    
+nums = [1,2,3]
+print(subsets(nums))               
