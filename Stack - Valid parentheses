@@ -1,0 +1,18 @@
+#checking Valid parantheses - Stack method
+
+def isValid(s):
+    stack = [] #to store
+    
+    for ch in s:
+        
+        if ch == '(': 
+            stack.append(ch) #adds '( ' to stack
+        else:
+            if not stack: #if ')' case
+                return False 
+            stack.pop() #removes '('
+           
+    return len(stack)==0 #empty stack
+
+s = '(())'        
+print(isValid(s)) #true
