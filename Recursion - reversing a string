@@ -1,0 +1,11 @@
+#reverse a string using recursion
+
+def reverse(str):
+    
+    if len(str) == 0: #base case
+        return str
+        
+    return reverse(str[1:]) + str[0] #recursive case
+    
+str = "Python"
+print(reverse(str)) #nohtyp
