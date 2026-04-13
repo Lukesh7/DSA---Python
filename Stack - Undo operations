@@ -1,0 +1,21 @@
+#Undo operation by stack - LIFO 
+
+ops = ['type a', 'type b', 'type c', 'undo']
+
+def undo(ops):
+    stack = []
+    
+    for op in ops:
+        
+        if op.startswith('type'): #startswith function checks the prefix 
+            char = op.split()[1] #gets only 'a'
+            stack.append(char) #push 
+        
+        elif op == 'undo': #to remove 
+            if stack: #to check if the stack is not empty
+                   stack.pop() #pop
+                   
+    return "".join(stack)
+        
+print(undo(ops)) #ab
+        
