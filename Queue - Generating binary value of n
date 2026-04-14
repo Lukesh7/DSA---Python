@@ -1,0 +1,17 @@
+from collections import deque #to use queue
+
+def generate_binary(n):
+    q = deque() #empty queue
+    q.append("1") #starts with 1 (1st binary num)
+
+    result = []
+
+    for _ in range(n):
+        curr = q.popleft() #gets 1st element(FIFO)
+        result.append(curr) #adds to result
+
+        q.append(curr + "0") #adds 0 & 1
+        q.append(curr + "1")
+    return result
+    
+print(generate_binary(5)) #['1', '10', '11', '100', '101']
