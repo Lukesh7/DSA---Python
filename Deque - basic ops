@@ -1,0 +1,22 @@
+# deque - double ended queue 
+#basic operations
+
+from collections import deque
+
+dq = deque()
+
+#adds to rear  
+dq.append(10) 
+dq.append(15) #deque([10, 15])
+
+#adds to front 
+dq.appendleft(5) #deque([5, 10, 15])
+ 
+#removes rear
+dq.pop() #deque([5, 10])
+
+#removes front
+dq.popleft() #deque([10])
+
+print(dq)
+
