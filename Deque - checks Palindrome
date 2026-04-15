@@ -1,0 +1,22 @@
+# Palindrome check by Deque
+
+from collections import deque 
+
+s = 'madam'
+
+def is_palindrome(s):
+    dq = deque(s) #str to deque
+    
+    while len(dq) > 1: #comparision needs atleast 2 element
+           
+           front = dq.popleft() #gets left elements
+           rear = dq.pop() #gets right elements
+           
+           #conditions to check palindrome
+           
+           if front != rear: #if 1st element not equals to last element
+               return False
+               
+    return True 
+               
+print(is_palindrome(s))
