@@ -1,0 +1,14 @@
+#prints elements in queue
+
+from collections import deque
+
+def print_queue(q):
+    
+    while q: #if the q is not empty
+        
+        element = q.popleft() #takes element              
+        print(element, end =" ")
+        
+q = deque([1,2,3,4,5])
+
+print_queue(q) #1 2 3 4 5
