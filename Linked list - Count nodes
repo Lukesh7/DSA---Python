@@ -1,0 +1,37 @@
+#node structure
+class Node:
+    
+    def __init__(self,data):      
+        self.data = data #node value
+        self.next = None #next pointer
+        
+#create linked list
+
+#creates nodes
+n1 = Node(10)
+n2 = Node(20)
+n3 = Node(30)
+
+#10 20 30
+
+#connect nodes
+n1.next = n2
+n2.next = n3
+
+head = n1 #current
+
+#to count nodes
+def count_nodes(head):
+    count = 0 #initial
+    
+    curr = head #starts from head
+    
+    while curr: #loop till end
+        
+        count += 1 #increment count
+        curr = curr.next #moves next node
+        
+    return count #total count is returned
+    
+counted = count_nodes(head)
+print(counted) # 3 
