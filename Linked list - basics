@@ -19,3 +19,59 @@ n1.next = n2
 n2.next = n3
 
 head = n1 #current
+
+#basic operations 
+
+# Insert at front
+
+def insert_front(head, val):
+    
+    new_node = Node(val)
+    new_node.next = head #places new node before head
+    return new_node
+
+head = insert_front(head, 5) #adds 5 at front
+print_list(head) #5 - 10 - 20 - 30 - None
+    
+# Insert at End
+
+def insert_rear(head, val):
+    new_node = Node(val)
+    
+    if not head: #if list is empty
+        return new_node #new_node is the head
+        
+    curr = head #from head
+    
+    while curr.next:
+        curr = curr.next #moves to next node
+        
+        
+    curr.next = new_node #new node attached to last node
+    
+    return head #returns updated head
+    
+head = insert_rear(head, 40) #adds 40 at end
+print_list(head) #5 - 10 - 20 - 30 - 40 - None
+
+#delete a node
+
+def delete_node(head, val):
+    
+    if head.data == val: #if the 1st node = node we want to delete 
+        return head.next #then skip that node
+        
+    curr = head #traverse from head
+    
+    while curr.next: #loop till end
+        
+        if curr.next.data == val: #if the next node value is matched
+            curr.next = curr.next.next #then that node is skipped (delete)
+            break #stop loop
+        
+        curr = curr.next
+       
+    return head
+    
+delete_node(head, 20) 
+print_list(head) #5-10-30-40-None
