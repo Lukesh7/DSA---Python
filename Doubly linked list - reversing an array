@@ -1,0 +1,68 @@
+# Doubly Linked List 
+#[prev <-> data <-> next] - structure
+
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.prev = None #prev pointer
+        self.next = None #next pointer
+        
+#creating Doubly Linked list
+
+def create_dll(arr):
+    if not arr: #if list is empty
+        return None
+    
+    head = Node(arr[0]) #head is 1st node
+    curr = head #starts from head
+    
+    for val in arr[ 1: ]: 
+            new_node = Node(val) 
+            
+            curr.next = new_node #forward link
+            
+            new_node.prev = curr #backward link
+            curr = new_node #moves to next node
+            
+    return head
+    
+#to print the list
+
+def print_list(head):
+    curr = head #from head
+    
+    while curr: #loops till last 
+        
+        print(curr.data, end = '<->') 
+        curr = curr.next #moves next node
+        
+    print("None")
+        
+#now the arr converted into DLL
+
+arr = [1,2,3,4]
+head = create_dll(arr)
+print_list(head)
+
+#1<->2<->3<->4<->None
+
+#reverse doubly linked list
+
+def reverse_dll(head):
+           curr = head #starts from head
+           temp = None #empty variable 
+           
+           while curr: #till last
+               
+               temp = curr.prev #current node's prev is stored to temp'
+               curr.prev = curr.next #prev pointer goes next
+               curr.next = temp #next pointer goes to old prev
+               
+               curr = curr.prev #swapped so we move 
+           if temp: #if temp is not empty
+                head = temp.prev #new head is set
+ 
+           return head #returns head of reversed list
+
+head = reverse_dll(head)        
+print_list(head) #4<->3<->2<->1<->None
