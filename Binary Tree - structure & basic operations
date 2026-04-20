@@ -45,4 +45,27 @@ def postorder(root):
                
 inorder(root) #20 10 30
 preorder(root) #10 20 30
-postorder(root) #20 30 10                
+postorder(root) #20 30 10 
+
+# Insertion 
+
+def insert(root, val):
+        if not root:
+                return Node(val)
+                
+        if val < root.data:
+                root.left = insert(root.left, val)  
+        else :
+                root.right = insert(root.right, val)
+        return root
+        
+insert(root, 40)
+insert(root, 50)
+print("Inorder after Insertion")
+inorder(root) #20 10 30 40 50
+
+print("Pre order after insertion")
+preorder(root) #10 20 30 40 50
+
+print("Post order after Insertion")
+postorder(root) #20 50 40 30 10
