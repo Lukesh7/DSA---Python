@@ -1,0 +1,48 @@
+# Tree
+
+#node structure
+class Node:
+    def __init__(self, val):
+        self.data = val
+        self.left = None
+        self.right = None
+        
+#creating a tree
+
+root = Node(10)
+root.left = Node(20)   
+root.right = Node(30) 
+#root.left.left = Node(40)
+#root.left.right = Node(50)
+
+
+# Tree Traversal
+#           10
+#         /      \
+#     20         30 
+
+# In order  (L - root - R)
+
+def inorder(root):
+    if root:
+        inorder(root.left)
+        print(root.data)
+        inorder(root.right)
+        
+# Pre order (root - L - R)
+def preorder(root):
+    if root:
+        print(root.data)
+        preorder(root.left)
+        preorder(root.right)
+        
+# Post order (L - R - root)
+def postorder(root):
+    if root:
+        postorder(root.left)
+        postorder(root.right)
+        print(root.data)                  
+               
+inorder(root) #20 10 30
+preorder(root) #10 20 30
+postorder(root) #20 30 10                
