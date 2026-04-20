@@ -69,3 +69,21 @@ preorder(root) #10 20 30 40 50
 
 print("Post order after Insertion")
 postorder(root) #20 50 40 30 10
+
+#Search in binary tree
+#Left < Root < Right
+
+def search(root, val):
+    if not root: #if tree is empty
+        return False
+    
+    if root.data == val: #if val is matched to curr value
+        return True
+    
+    if val < root.data: #if val is smaller then search in left subtree
+        return search(root.left, val)
+    else:
+        return search(root.right, val)#else search right
+        
+print(search(root, 5)) # False
+print(search(root, 30)) # True        
