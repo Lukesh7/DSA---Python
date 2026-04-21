@@ -86,4 +86,14 @@ def search(root, val):
         return search(root.right, val)#else search right
         
 print(search(root, 5)) # False
-print(search(root, 30)) # True        
+print(search(root, 30)) # True   
+
+# Count nodes by recursion                             
+def count_nodes(root):
+    if not root: #base case
+                return 0
+    return 1 + count_nodes(root.left) + count_nodes(root.right)       
+    
+tot_nodes = count_nodes(root)
+print("Total Count of nodes : ", tot_nodes)     
+                
