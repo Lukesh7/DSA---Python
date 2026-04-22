@@ -1,0 +1,12 @@
+#Heap - Max heap
+
+import heapq
+
+heap =[]
+
+heapq.heappush(heap, -10)
+heapq.heappush(heap, -5)
+heapq.heappush(heap, -15)
+
+print(heap) #[-15, -10, -5] 
+print(-heapq.heappop(heap)) # 15
