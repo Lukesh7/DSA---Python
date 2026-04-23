@@ -1,0 +1,17 @@
+# Heapify Up - pushes up new element into its correct position
+
+arr =[10,20,30]
+
+def heapify_up(arr, i): # new element's index'
+    parent = (i - 1) //2 #parent index
+    
+    while i > 0 and arr[i] < arr[parent]:
+        #swaps child & parent
+        arr[i], arr[parent] = arr[parent], arr[i]
+        
+        i = parent #moves up       
+        parent = (i-1) // 2  #new parent updated
+
+arr.append(5) #[10,20,30,5]
+heapify_up(arr, len(arr)-1)
+print(arr) # [5,10,20,30]
