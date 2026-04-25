@@ -1,0 +1,32 @@
+#Heapify down
+
+arr = [30, 10, 20] 
+n = 3 #size of arr
+i = 0 #current value
+
+
+def heapify_down(arr, i , n):
+    smallest = i #assumes curr is smallest
+    
+    left = 2*i + 1 #left child's idx
+    right = 2*i + 2 #right child's idx
+    
+    #if left exists and smaller than curr
+    if left < n and arr[left] < arr[smallest]:
+        
+        smallest = left 
+        
+    #if right exists and smaller than curr
+    if right < n and arr[right] < arr[smallest]:
+        
+        smallest = right
+    
+     #if smallest val changes    
+    if smallest != i:
+        #curr & smallest val are swapped
+        arr[i], arr[smallest] = arr[smallest], arr[i]
+        #recursion after heapify 
+        heapify_down(arr, smallest, n)
+        
+heapify_down(arr, 0, 3)
+print(arr) #[10, 30, 20]
