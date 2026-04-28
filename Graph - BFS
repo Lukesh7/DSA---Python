@@ -1,0 +1,38 @@
+#graph structure
+"""
+A ---- B
+|             |
+C ---- D """
+
+#adjacency list
+
+graph = { 
+    "A" : ["B", "C"],
+    "B" : ["A", "D"],
+    "C" : ["A", "D"],
+    "D" : ["B", "C"]
+    }
+  
+#BFS - level by level explore
+
+from collections import deque
+
+def bfs(graph, start):
+    visited = set()
+    
+    queue = deque([start]) #start node added to queue
+    
+    while queue:
+        node = queue.popleft() #takes 1st element 
+        
+        if node not in visited:
+            print(node, end = " ")  
+            visited.add(node) #node added to visited so no repeat
+            
+            for neighbour in graph[node]: #traverses neighbour nodes
+                
+                if neighbour not in visited:
+                    #neighbour nodes added to queue
+                    queue.append(neighbour)
+                    
+bfs(graph, "A") #A B C D
