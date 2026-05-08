@@ -1,0 +1,35 @@
+#DFS - Structure
+graph = {
+    "A" : ["B", "C"],
+    "B" : ["D"],
+    "C" : [],
+    "D" : []
+    }
+
+"""
+      A
+     / \
+    B   C
+     \
+      D
+"""
+# DFS- recursive
+def dfs(graph, node, visited=None):
+#to create an empty set as visited
+    if visited is None:
+        visited = set()
+
+#to check the current node is already visited
+    if node not in visited:
+        # prints current node
+        print(node, end= " ")
+        #now the node is added as visited
+        visited.add(node)
+
+        #to loop neighbours of the current node
+        for neighbour in graph[node]:
+
+            #recursive function
+            dfs(graph, neighbour, visited)
+         
+dfs(graph, "A") #A B D C 
